@@ -227,6 +227,9 @@ embed.destroy();
 <script src="@devmetrics/embed/dist/index.mjs"></script>
 ```
 
+# Embed Codebox example
+https://codesandbox.io/embed/yhp3kj?view=preview
+
 ## Responsive Design
 
 All pages are fully functional at:
@@ -321,7 +324,3 @@ pnpm start
 2. Ensure `pnpm tsc --noEmit` passes
 3. Add tests for new features
 4. Run `pnpm lint` before committing
-
-## License
-
-MIT
