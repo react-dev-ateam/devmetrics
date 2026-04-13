@@ -2,6 +2,9 @@
 
 A production-ready Next.js 15 development metrics and deployment tracking dashboard built with TypeScript, Tailwind CSS v4, and advanced rendering strategies.
 
+# Live Preview
+https://devmetrics-one.vercel.app
+
 ## Features
 
 - **🚀 SSR Dashboard**: Real-time data fetched from the server on every request
