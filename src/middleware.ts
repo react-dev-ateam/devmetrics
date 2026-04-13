@@ -43,11 +43,7 @@ export async function middleware(request: NextRequest) {
   }
 
   // 2. CORS headers for all /embed/* routes
-  if (
-    pathname.startsWith("/embed/") ||
-    pathname === "/" ||
-    pathname.startsWith("/dashboard")
-  ) {
+  if (pathname.startsWith("/embed/")) {
     const response = NextResponse.next();
 
     response.headers.set("Access-Control-Allow-Origin", "*");
