@@ -3,6 +3,8 @@ import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { getDocs, getDocBySlug } from "@/lib/api-client";
 
+import ReactMarkdown from "react-markdown";
+
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
@@ -57,10 +59,11 @@ export default async function DocsPage({ params }: Readonly<DocsPageProps>) {
 
         <Card>
           <CardContent className="pt-6">
-            <div
-              className="prose dark:prose-invert max-w-none"
-              dangerouslySetInnerHTML={{ __html: doc.body }}
-            />
+            <div className="prose dark:prose-invert max-w-none">
+              <ReactMarkdown>
+                {doc.body}
+              </ReactMarkdown>
+            </div>
           </CardContent>
         </Card>
       </div>

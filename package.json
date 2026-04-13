@@ -2,7 +2,9 @@
   "name": "dev-metrics-dashboard",
   "version": "0.1.0",
   "private": true,
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack && npm run build --workspace=packages/embed",
@@ -13,32 +15,33 @@
     "test:ui": "vitest --ui"
   },
   "dependencies": {
+    "@devmetrics/embed": "workspace:*",
+    "jose": "^4.15.4",
+    "lucide-react": "^0.408.0",
+    "next": "15.5.15",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.15",
-    "zod": "^3.22.4",
-    "lucide-react": "^0.408.0",
-    "jose": "^4.15.4",
-    "@devmetrics/embed": "workspace:*"
+    "react-markdown": "^10.1.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@playwright/test": "^1.40.0",
+    "@tailwindcss/postcss": "^4",
+    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/react": "^14.1.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
+    "@vitejs/plugin-react": "^4.2.0",
     "eslint": "^9",
     "eslint-config-next": "15.5.15",
-    "@eslint/eslintrc": "^3",
-    "vitest": "^1.0.4",
-    "playwright": "^1.40.0",
-    "@playwright/test": "^1.40.0",
+    "jsdom": "^23.0.0",
     "msw": "^2.0.0",
+    "playwright": "^1.40.0",
+    "tailwindcss": "^4",
     "tsup": "^8.0.0",
-    "@testing-library/react": "^14.1.0",
-    "@testing-library/jest-dom": "^6.1.5",
-    "@vitejs/plugin-react": "^4.2.0",
-    "jsdom": "^23.0.0"
+    "typescript": "^5",
+    "vitest": "^1.0.4"
   }
 }
